@@ -1,0 +1,131 @@
+ <!-- Navbar code -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info sticky-top">
+    <a class="navbar-brand" href="#" style="font-weight: 600; padding-left: 20px;"><i class="fa fa-university fa-2x"
+      style="padding-right: 10px;"></i>DEC Alumni Association</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+       <a class="nav-link" href="http://localhost:3000/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Initiatives
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://localhost:3000/initiative">Bhavisya Pariwar</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Directory
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://localhost:3000/alumnisearch">Alumni Search</a>
+          <a class="dropdown-item" href="http://localhost:3000/news_post">Post</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/jobintern">Jobs/Internships</a>
+      </li>
+      <li class="nav-item active">
+       <a class="nav-link" href="http://localhost:3000/profile">Profile</a>
+      </li>
+      <li class="nav-item active">
+       <a class="nav-link" href="http://localhost:3000/signin">Sign Out</a>
+      </li>
+      
+     </ul>
+    </div>
+   </nav>
+  <!-- Body Part -->
+  <div id="events">
+          <div class="header">
+            <h2>Events</h2>
+          </div>
+            <div class="jobs-section">
+            <div class="post-btn">
+                <a class="btn btn-lg btn-warning" href="http://localhost:3000/event_post" style="float: right;">Post event</a>
+            </div>
+            </div>
+          <div class="row">
+            {{#each event_data}}
+            <div class="col-6">
+              <div class="event-card">
+              <div class="event-date">
+                <div class="left">
+                  <p class="date"> {{this.det}} </p>
+                </div> 
+                <div class="left" style="margin-left: 5px;">
+                  <p class="event-month"> {{this.month}} {{this.year}} </p> 
+                  <p class="event-day"> {{this.day}} </p> </div>
+              </div>
+              <div class="event-topic">
+                <a href="#"> {{this.event_title}} </a>
+              </div>
+              <div class="event-time">
+                <p> {{this.time}} </p>
+              </div>
+            </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+
+<div class="footerContainer">
+    <div class="row">
+      <div class="col-3">
+        <div class="footer-link">
+          <a href="http://localhost:3000/about">About</a>
+        </div>
+        <div class="footer-link">
+          <a href="#">Terms Of Use</a>
+        </div>
+        <div class="footer-link">
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="footer-link">
+          <a href="http://localhost:3000/alumnisearch">Alumni Search</a>
+        </div>
+        <div class="footer-link">
+          <a href="http://localhost:3000/allneed">Needs</a>
+        </div>
+        <div class="footer-link">
+          <a href="http://localhost:3000/allevent">Events</a>
+        </div>
+        <div class="footer-link">
+          <a href="http://localhost:3000/jobintern">Jobs & Internships</a>
+        </div>
+        <div class="footer-link">
+          <a href="http://localhost:3000/initiative">Bhavisya Pariwar</a>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="header">
+          <h6>Contact Us</h6>
+        </div>
+      </div>
+
+       <div class="col-3">
+        <div class="logo">
+          <h6><i class="fa fa-university fa-2x"
+      style="padding-right: 10px;"></i> DEC Allumni Association</h6>
+        </div>
+      </div>
+
+    </div>
+    <div class="copyright">
+      <p>&copy; 2021 DEC Alumni Association</p>
+    </div>
+  </div>

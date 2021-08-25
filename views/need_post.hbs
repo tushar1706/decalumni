@@ -1,0 +1,103 @@
+  <!-- Navbar code -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info sticky-top">
+    <a class="navbar-brand" href="#" style="font-weight: 600; padding-left: 20px;"><i class="fa fa-university fa-2x"
+      style="padding-right: 10px;"></i>DEC Alumni Association</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+       <a class="nav-link" href="http://localhost:3000/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Initiatives
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://localhost:3000/initiative">Bhavisya Pariwar</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Directory
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://localhost:3000/alumnisearch">Alumni Search</a>
+          <a class="dropdown-item" href="http://localhost:3000/news_post">Post</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/jobintern">Jobs/Internships</a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/profile">Profile</a>
+      </li>
+      <li class="nav-item active">
+       <a class="nav-link" href="http://localhost:3000/signin">Sign Out</a>
+      </li>
+      
+     </ul>
+    </div>
+   </nav>
+ <!-- Body Part -->
+ <div class="container">
+  <div class="row">
+   <!-- Left pannel  -->
+   <div class="col-3">
+    <div class="left-panel">
+     <a href="http://localhost:3000/news_post" id="personalInfo-btn" class="btn btn-info btn-lg" >News post</a>
+       <a href="http://localhost:3000/event_post" id="jobInfo-btn"  class="btn btn-info btn-lg">Events post</a>
+     <a href="http://localhost:3000/jobintern_post" id="achievements-btn" class="btn btn-info btn-lg" >Job/Internship post</a>
+     <a href="" id="higherEdu-btn" class="btn btn-info btn-lg" style="background-color: #095f94;color: white;">Need post</a>
+    
+    </div>
+   </div>
+   <!-- Right panel with signup code -->
+   <div class="col-9">
+     <div><p class="success-alert">{{message}}</p></div>
+     <div class="heading">Need post</div>
+  <form action=" " method="POST">
+     
+        <div class="year">
+            <label for="class-year">Enter your needs:</label>
+            <textarea name="description" class="form-control" placeholder="Your text here......" style="width: 100%; height: 250px;" required></textarea>
+        </div>
+        
+      <button id="cancel-btn" class="btn btn-info btn-lg">Cancel</button>
+      <button id="save-btn" type="submit" class="btn btn-info btn-lg">Post</button>
+  </form> 
+  <!---fetch post--->
+  <div class="needs container">
+    <div class="header">
+      <h2>Posted Needs</h2>
+    </div>
+    <div class="needs-content row">
+    {{#each data_need}}
+      <div class="needs-card col-sm-5" style="margin-bottom: 20px;">
+         <img class="profile-img" src="/images/{{this.profile_pic_path}}" alt="">
+        <a class="reply-btn " href="need_delete/{{this.post_id}}"><img src="images/del.png" alt="" style="width: 30px; height:30px;"></a>
+        <a class="reply-btn " href="need_update/{{this.post_id}}"><img src="images/edit.png" alt="" style="width: 20px; height:20px;"></a>
+        <h6 class="name"><b>{{this.name}}</b></h6>
+        <p>Class Of <span class="class-of"> {{this.class_yr}} </span></p>
+        <div class="need-info">
+          <p>
+            {{this.msg}}
+          </p>
+        </div>
+        <h2>Hello</h2>
+      </div>
+    {{/each}}
+   </div>
+  <!---end---> 
+   </div>
+     
+ </div>
+
+ 
+
+ 

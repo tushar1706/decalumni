@@ -1,0 +1,137 @@
+<!-- Navbar code -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info sticky-top">
+    <a class="navbar-brand" href="#" style="font-weight: 600; padding-left: 20px;"><i class="fa fa-university fa-2x"
+      style="padding-right: 10px;"></i>DEC Alumni Association</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+       <a class="nav-link" href="http://localhost:3000/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+       <a class="nav-link" href="http://localhost:3000/about">About</a>
+      </li>
+     <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/initiative" >
+          Initiatives
+        </a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Directory
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="alumnisearch">Alumni Search</a>
+          <a class="dropdown-item" href="http://localhost:3000/news_post">Post</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/jobintern">Jobs/Internships</a>
+      </li>
+       <li class="nav-item active">
+       <a class="nav-link" href="http://localhost:3000/profile">Profile</a>
+      </li>
+      
+     </ul>
+    </div>
+   </nav>
+  
+<!---initiative--->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="header">
+            <h2>Initiatives</h2>
+            </div>
+            <div class="campaign-container">
+            <div class="row">
+                <div class="campaign-img col-6">
+                    <img src="./images/childrenSmile.jpg" alt="image">
+                </div>
+                <div class="campaign-info col-sm-6">
+                    <div class="campaign-title">
+                        <h3>Donate to Bhavisya Pariwar</h3>
+                    </div>
+                    <div class="campaign-detail">
+                        <p>Education is the most important thing to make a better society.People who work as a daily wager
+                        can't be able to afford expenses of education for their children and also education facility of rural areas are not too good.
+                        And being an Engineer our responsibility is to help those children.So please donate to this campaign.A small donation will make a big 
+                        difference.
+                        </p>
+                    </div>
+                    <div  style="margin-right: 10px;">
+                        <form action="pay" method="POST">
+                          <label for="pay">Enter your name:</label>
+                          <input type="text" class="form-control" name="name" id="" placeholder="Enter your name here..." required>
+                          <label for="pay">Enter your emailt</label>
+                          <input type="email" class="form-control" name="email" id="" placeholder="Enter your email here..." required>
+                          <label for="pay">Enter Mobile number</label>
+                          <input type="number" class="form-control" name="mob" id="" placeholder="Enter mobile number here..." required>
+                          <label for="pay">Enter amount</label>
+                          <input type="number" class="form-control" name="amount" id="" placeholder="Enter amount here..." required>
+                        <br>
+                        <button type="submit" class="form-control btn btn-warning">Donate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="footerContainer">
+    <div class="row">
+      <div class="col-3">
+        <div class="footer-link">
+          <a href="http://localhost:3000/about">About</a>
+        </div>
+        <div class="footer-link">
+          <a href="#">Terms Of Use</a>
+        </div>
+        <div class="footer-link">
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="footer-link">
+          <a href="http://localhost:3000/alumnisearch">Alumni Search</a>
+        </div>
+        <div class="footer-link">
+          <a href="http://localhost:3000/allneed">Needs</a>
+        </div>
+        <div class="footer-link">
+          <a href="http://localhost:3000/allevent">Events</a>
+        </div>
+        <div class="footer-link">
+          <a href="http://localhost:3000/jobintern">Jobs & Internships</a>
+        </div>
+        <div class="footer-link">
+          <a href="http://localhost:3000/initiative">Bhavisya Pariwar</a>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="header">
+          <h6>Contact Us</h6>
+        </div>
+      </div>
+
+       <div class="col-3">
+        <div class="logo">
+          <h6><i class="fa fa-university fa-2x"
+      style="padding-right: 10px;"></i> DEC Allumni Association</h6>
+        </div>
+      </div>
+
+    </div>
+    <div class="copyright">
+      <p>&copy; 2021 DEC Alumni Association</p>
+    </div>
+  </div>

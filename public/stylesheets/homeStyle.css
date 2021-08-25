@@ -1,0 +1,173 @@
+
+.carousel{
+    margin-bottom: 50px;
+}
+.carousel .carousel-item {
+    height: 500px;
+  }
+  
+  .carousel-item img {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      min-height: 500px;
+  }
+  /* .header{
+    overflow: hidden;
+  } */
+  .header > h2{
+    margin-bottom: 20px;
+    /* float: left; */
+  }
+#about-section{
+    background-color: rgba(45,45,45,0.1);
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px 50px 50px 50px;
+    text-align: justify;
+    border:1px solid rgba(35,35,35,0.5);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px;
+    position: relative;
+}
+#about-section > img{
+    margin-left: 20px;
+    max-height: 200px;
+    max-width: 50%;
+    float: right;
+}
+#events{
+    padding: 50px;
+}
+.event-card{
+    background-color: rgba(45,45,45,0.1);
+    height: 250px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .event-date{
+    background-color: #1B89AB;
+    height: 100px;
+    width: 100%;
+    color: #ffffff;
+    padding:20px 20px 0px 20px;
+    /* text-align: center; */
+  
+  }
+  .left{
+    position: relative;
+    display: inline;
+  }
+  .event-date .date{
+    font-size: 2.5rem;
+    border-right: solid #ffffff 1px;
+    position: relative;
+    display: inline;
+  }
+  .event-month{
+    padding-top: 0px;
+    position: relative;
+    display: inline;
+    bottom: 1rem;
+    font-weight: 700;
+  }
+  .event-day{
+    position: relative;
+    display: inline;
+    right: 90px;
+    font-weight: 700;
+  }
+  .event-topic{
+    margin: 20px;
+  }
+  .event-topic a{
+    color: #1B89AB;
+  }
+  .event-time p{
+    margin-left: 20px;
+  }
+
+  .news{
+    background-color:#edede4 ;
+    border:1px solid black;
+    border-radius: 5px;
+    padding:20px;
+    margin-bottom: 60px;
+  }
+  .news-item p{
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .campaign-container{
+      background-color: rgba(45,45,45,0.1);
+      padding-bottom: 5px;
+      margin-bottom: 50px;
+      border:1px solid rgba(35,35,35,0.5);
+      border-radius:5px;
+      box-shadow: 2px 2px 5px;
+
+  }
+  .campaign-img >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .campaign-title{
+      padding-top: 10px;
+      padding-right: 10px;
+  }
+  .campaign-detail{
+      text-align: justify;
+      padding-right: 20px;
+  }
+  .needs{
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+  .post-btn{
+    margin-bottom: 10px;
+    margin-right: 50px;
+    overflow: hidden;
+  }
+  .profile-img{
+    margin-right: 20px;
+    float: left;
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+  }
+  .reply-btn{
+    position: relative;
+    float: right;
+    margin-right: 20px;
+  }
+  
+  /* .needs-content{
+    padding-top: 70px;
+  } */
+  .needs-card{
+    /* background-color: rgba(45,45,45,0.1); */
+    margin-left: 60px;
+    padding: 20px;
+    border: 2px solid #1B89AB;
+    border-radius:5px;
+    overflow: hidden;
+  }
+  .need-info{
+    text-align: justify;
+    padding: 0px 20px 0px 70px;
+  }
+  .view-all-btn{
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+  .job-card{
+    padding: 1rem;
+    border: solid white 5px;
+    margin-left: 60px;
+    margin-top: 20px;
+    border: 2px solid #1B89AB;
+    border-radius: 5px;
+  }

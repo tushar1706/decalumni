@@ -1,0 +1,91 @@
+<!-- Navbar code -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-info sticky-top">
+  <a class="navbar-brand" href="#" style="font-weight: 600; padding-left: 20px;"><i class="fa fa-university fa-2x"
+      style="padding-right: 10px;"></i>DEC Alumni Association</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Initiatives
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://localhost:3000/initiative">Bhavisya Pariwar</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Directory
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="http://localhost:3000/alumnisearch">Alumni Search</a>
+          <a class="dropdown-item" href="http://localhost:3000/news_post">Post</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/jobintern">Jobs/Internships</a>
+      </li>
+     
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/profile">Profile</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="http://localhost:3000/signin">Sign Out</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+ <!-- Body Part -->
+ <div class="container">
+  <div class="row">
+   <!-- Left pannel  -->
+   <div class="col-3">
+    <div class="left-panel">
+     <a href="http://localhost:3000/profile" id="personalInfo-btn" class="btn btn-info btn-lg">All Information</a>
+     <a href="http://localhost:3000/personalinfo" id="personalInfo-btn" class="btn btn-info btn-lg">Personal Information</a>
+       <a href="http://localhost:3000/jobinfo" id="jobInfo-btn"  class="btn btn-info btn-lg">Job Information</a>
+     <a href="http://localhost:3000/privacy" id="privacy-btn" class="btn btn-info btn-lg" style="background-color: #095f94;color: white;">Privacy Setting</a>
+    </div>
+   </div>
+   <!-- Right panel with signup code -->
+   <div class="col-9">
+    <div class="info-form">
+     <!-- <div class="h1">Sign Up</div> -->
+     <!-- <div class="h6">Type Here Your Details to get connected with DEC Alumni Association</div> -->
+     <form action=" " method="POST">
+       <div><p class="success-alert">{{message}}</p></div>
+      <div class="heading">Privacy setting</div>
+      <div class="job-info">
+      <div class="name-field">
+        <label for="company-name">E-mail/username:</label>
+       <input type="text" name="user_name" placeholder="email/username" class="post-input-field" id="company-name" value="{{userdtl.email}}" readonly />
+      </div>
+      <div class="title-field">
+       <label for="title">password:</label>
+       <input type="password" name="password" placeholder="Password" class="post-input-field" value="{{current_jobinfo.title}}"  />
+      </div>
+      <div class="year-filed">
+        <label for="joining-year">Confirm password</label>
+       <input type="password" name="c_password" placeholder="Confirm Password" placeholder="" class="post-input-field" id="joining-year" value="{{current_jobinfo.joining_year}}"  />
+      </div>
+       
+       
+      <button id="cancel-btn" class="btn btn-info btn-lg">Cancel</button>
+      <button id="save-btn" type="submit" class="btn btn-info btn-lg">Change password</button>
+     </form>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ 

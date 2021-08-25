@@ -1,0 +1,107 @@
+<!-- Navbar code -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-info sticky-top">
+  <a class="navbar-brand" href="#" style="font-weight: 600; padding-left: 20px;"><i class="fa fa-university fa-2x"
+      style="padding-right: 10px;"></i>DEC Alumni Association</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Initiatives
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Bhavisya Pariwar</a>
+          <a class="dropdown-item" href="#">demo 1</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">demo 2</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Directory
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="alumnisearch">Alumni Search</a>
+          <a class="dropdown-item" href="#">Chapters</a>
+          <a class="dropdown-item" href="#">Photo Gallery</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Jobs/Internships</a>
+      </li>
+     
+      <li class="nav-item active">
+        <a class="nav-link" href="profile">Profile</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="signin">Sign Out</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+ <!-- Body Part -->
+ <div class="container">
+  <div class="row">
+   <!-- Left pannel  -->
+   <div class="col-3">
+    <div class="left-panel">
+     <a href="http://localhost:3000/news_post" id="personalInfo-btn" class="btn btn-info btn-lg" style="background-color: #095f94;color: white;">News post</a>
+       <a href="http://localhost:3000/event_post" id="jobInfo-btn"  class="btn btn-info btn-lg">Events post</a>
+     <a href="http://localhost:3000/jobintern_post" id="achievements-btn" class="btn btn-info btn-lg">Job/Internship post</a>
+     <a href="http://localhost:3000/need_post" id="higherEdu-btn" class="btn btn-info btn-lg">Need post</a>
+    
+    </div>
+   </div>
+   <!-- Right panel with signup code -->
+   <div class="col-sm-9">
+     <div><p class="success-alert">{{message}}</p></div>
+     <div class="heading">News post</div>
+   <form action=" " method="POST" enctype="multipart/form-data">
+      <div class="year">
+            <label for="">Select image</label>
+            <input type="file" name="image" id="myImg" accept="image/*">
+      </div> 
+
+          <div class="year">
+            <label for="class-year">News title:</label>
+            <input id="class-year"  class="form-control" name="title" type="text" value="{{data_news.news_title}}" required>
+          </div>
+
+           <div>
+              <img  src="" id="blah" style="width: 100%;">
+            </div>
+
+           <div class="bio-field">
+              <label for="bio">Your News:</label>
+              <textarea name="news"  class="form-control" id="" placeholder="Write something here....." required >{{data_news.news_body}}</textarea>
+          </div>
+     
+      <button id="cancel-btn" class="btn btn-info btn-lg">Cancel</button>
+      <button id="save-btn" type="submit" class="btn btn-info btn-lg">Update</button>
+   </form> 
+</div>
+
+<script>
+   window.addEventListener('load', function() {
+    document.querySelector('input[type="file"]').addEventListener('change', function() {
+        if (this.files && this.files[0]) {
+          var img = document.querySelector('img');  // $('img')[0]
+          img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+          img.onload = imageIsLoaded;
+        }
+    });
+});
+ </script>
+ 
+
+ 

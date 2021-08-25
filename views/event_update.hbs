@@ -1,0 +1,175 @@
+<!-- Navbar code -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-info sticky-top">
+  <a class="navbar-brand" href="#" style="font-weight: 600; padding-left: 20px;"><i class="fa fa-university fa-2x"
+      style="padding-right: 10px;"></i>DEC Alumni Association</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Initiatives
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Bhavisya Pariwar</a>
+          <a class="dropdown-item" href="#">demo 1</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">demo 2</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Directory
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="alumnisearch">Alumni Search</a>
+          <a class="dropdown-item" href="#">Chapters</a>
+          <a class="dropdown-item" href="#">Photo Gallery</a>
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Jobs/Internships</a>
+      </li>
+     
+      <li class="nav-item active">
+        <a class="nav-link" href="profile">Profile</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="signin">Sign Out</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+ <!-- Body Part -->
+ <div class="container">
+  <div class="row">
+   <!-- Left pannel  -->
+   <div class="col-3">
+    <div class="left-panel">
+     <a href="news_post" id="personalInfo-btn" class="btn btn-info btn-lg" >News post</a>
+       <a href="http://localhost:3000/event_post" id="jobInfo-btn"  class="btn btn-info btn-lg" style="background-color: #095f94;color: white;">Events post</a>
+     <a href="http://localhost:3000/jobintern_post" id="achievements-btn" class="btn btn-info btn-lg" >Job/Internship post</a>
+     <a href="http://localhost:3000/need_post" id="higherEdu-btn" class="btn btn-info btn-lg">Need post</a>
+    
+    </div>
+   </div>
+   <!-- Right panel with signup code -->
+   <div class="col-9">
+     <div><p class="success-alert">{{message}}</p></div>
+     <div class="heading">Event update</div>
+  <form action=" " method="POST">
+     
+        <div class="year">
+            <label for="class-year">Title:</label>
+            <input type="text" class="form-control" name="title" value="{{data_event.event_title}}" required>
+        </div>
+        <div class="year">
+            <label for="class-year">Event date:</label>
+                <select id="day" class="form-control" name="day" required>
+                <option value="{{data_event.det}}">{{data_event.det}}</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+        </div>
+        <div class="year">
+            <label for="class-year">Month-Year:</label>
+            <table>
+              <tr>
+                <td>
+                  <select id="month" name="month" class="form-control" required>
+                      <option value="{{data_event.month}}">{{data_event.month}}</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                </td>
+                <td>
+                  <select name="year" id="" class="form-control" required>
+                    <option value="{{data_event.year}}">{{data_event.year}}</option>
+                    <option value="2021">2021</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+        </div>
+        <div class="year">
+            <label for="class-year">Event time:</label>
+              <table>
+                <tr>
+                  <td> <input type="time" class="form-control" name="time" value="{{data_event.time}}" required></td>
+                  <td>
+                    <select name="ampm" class="form-control" id="" required>
+                        <option value="{{data_event.ampm}}">{{data_event.ampm}}</option>
+                        <option value="am">am</option>
+                        <option value="pm">pm</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+        </div>
+        <div class="year">
+            <label for="class-year">Event day:</label>
+            <select name="week" class="form-control" id="" required>
+                <option value="{{data_event.day}}">{{data_event.day}}</option>
+                <option value="Sunday">Sunday</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+            </select>
+        </div>
+      <button id="cancel-btn" class="btn btn-info btn-lg">Cancel</button>
+      <button id="save-btn" type="submit" class="btn btn-info btn-lg">Update</button>
+  </form>  
+ </div>
+</div>
+ 
